@@ -8,6 +8,8 @@ df = pd.read_excel('data_title.xlsx')
 def clean_title(title):
     patterns = {
         r"\.\s*$", #"." at the end of the string
+        r"\.\.\..*", #"..." at the end of the string
+        r"\,.*", #"," at the end of the string
         r"/by.*", #"/by" and everything after it
         r"\bby\b.*", #  "by" as a whole word and everything after it
         r"...by.*", #"… by" and everything after it
