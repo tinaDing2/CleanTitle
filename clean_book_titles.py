@@ -7,7 +7,7 @@ df = pd.read_excel('data_title.xlsx')
 # Function: clean the book titles by removing authorships 
 def clean_title(title):
     patterns = {
-        r"\.\s*s", #"." at the end of the string
+        r"\.\s*$", #"." at the end of the string
         r"/by.*", #"/by" and everything after it
         r"\bby\b.*", #  "by" as a whole word and everything after it
         r"...by.*", #"… by" and everything after it
